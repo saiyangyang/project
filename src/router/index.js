@@ -1,7 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
-
+import Home from "@/components/Home"
+import Share from "@/components/Share"
+import Happen from "@/components/Happen"
+import Recommend from "@/components/Recommend"
 Vue.use(Router)
 
 export default new Router({
@@ -9,7 +12,31 @@ export default new Router({
     {
       path: '/',
       name: 'HelloWorld',
-      component: HelloWorld
-    }
+      component: HelloWorld,
+      children:[
+      	{
+      		path:"/home",
+		    	component:Home
+      	},
+      	{
+      		path:"/recommend",
+      		component:Recommend
+      	},
+      	{
+      		path:"/happen",
+      		component:Happen
+      	},
+      	{
+      		path:"/share",
+      		component:Share
+      	}
+      
+      
+      ]
+      
+    },
+    
+   
+  
   ]
 })
