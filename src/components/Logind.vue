@@ -12,12 +12,33 @@
 
 	  
 		<section>
-	  		<div class="logi">
-	  			<div class="let">
-	  				
-	  				
-	  				
-	  			</div>
+			<div class="topd">
+				<div class="logi">
+		  			<i class="iconfont icon-yaoqing"></i>
+		  		</div>
+		  		<div style="width: 50px;height: 50px;">
+		  			<p style="width: 50px;">用户名</p>
+		  			<p style="width: 50px;">lv2</p>
+		  		</div>
+		  		<div></div><div></div>
+		  		<div>
+		  			<router-link to="/" tag="span">个人主页 ></router-link>
+		  		</div>
+			</div>
+	  		<div class="bott">
+	  			<dl>
+	  				<dt>关注</dt>
+	  				<dd>5</dd>
+	  			</dl>
+	  			<dl>
+	  				<dt>粉丝</dt>
+	  				<dd>0</dd>
+	  			</dl>
+	  			<dl>
+	  				<dt>访客</dt>
+	  				<dd>0</dd>
+	  			</dl>
+	  			
 	  		</div>
 	  	</section>
 	  	<article>
@@ -62,8 +83,31 @@
 		margin: 0;
 		padding: 0;
 	}
-	
-	
+	.bott{
+		display: flex;
+		
+	}
+	.bott dl{
+		margin-left: 20px;
+	}
+	.topd{
+		height: 15vh;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.logi{
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background: gray;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.logi i{
+		font-size: 30px;
+	}
 	.llo{
 		height:38vh;
 	}
@@ -78,9 +122,15 @@
 	.middle dl{
 		margin: 10px 0;
 		width: 33.33vw;
+		display: flex;
+		flex-direction: column;
 		
 	}
-	.middle dd{
+	dl{
+		display: flex;
+		flex-direction: column;
+	}
+	 dd{
 		display: flex;
 		justify-content: center;
 	}
@@ -88,12 +138,8 @@
 		display: flex;
 		justify-content: space-around;
 	}
-	dl{
-		display: flex;
-		flex-direction: column;
-		
-	}
-	dt{
+	
+	 dt{
 		display: flex;
 		justify-content: center;
 	}
@@ -108,23 +154,14 @@
 	section{
 		margin-top: 60px;
 		width: 90vw;
-		height: 20vh;
+		height: 25vh;
 		background: #ccc;
 		margin: 0 auto;
 		display: flex;
-		align-items: center;
-		justify-content: center;
+		flex-direction: column;
 		border-radius: 10px;
 	}
-	.logi{
-		border:1px solid white;
-		height: 5vh;
-		width: 30vw;
-		border-radius: 5px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
+	
 	article h4{
 		color:#000;
 		font-size: 14x;
